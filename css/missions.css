@@ -503,3 +503,347 @@ transform:scale(1.05);
     }
 
 }
+/* =================================
+   Винтажный конверт Maison de la Rose Noire
+================================= */
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(80,40,20,0.35),
+            transparent 60%
+        ),
+        #120b09;
+
+    min-height:100vh;
+
+}
+
+
+/* общий контейнер */
+
+.mission-wrapper {
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+}
+
+
+/* конверт */
+
+.envelope {
+
+    position:relative;
+
+    width:520px;
+
+    max-width:95%;
+
+    padding:35px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6d3d22,
+            #3a1e13
+        );
+
+
+    border-radius:8px;
+
+
+    box-shadow:
+
+        0 30px 60px rgba(0,0,0,0.75),
+
+        inset 0 0 40px rgba(0,0,0,0.4);
+
+
+    animation: envelopeAppear 1.2s ease;
+
+}
+
+
+
+/* эффект краёв конверта */
+
+.envelope::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:
+
+        1px solid
+
+        rgba(218,170,85,0.35);
+
+
+    pointer-events:none;
+
+}
+
+
+
+/* бумага внутри */
+
+.paper {
+
+    position:relative;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.4),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f3dfb0,
+            #e6c98d
+        );
+
+
+    padding:45px 40px;
+
+
+    color:#3b2114;
+
+
+    border-radius:3px;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,0.35);
+
+
+    overflow:hidden;
+
+}
+
+
+
+/* старая фактура бумаги */
+
+.paper::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+        repeating-linear-gradient(
+            45deg,
+            rgba(90,50,20,0.03),
+            rgba(90,50,20,0.03) 2px,
+            transparent 2px,
+            transparent 5px
+        );
+
+
+    pointer-events:none;
+
+}
+
+
+
+/* заголовки */
+
+.paper h1 {
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+
+    text-align:center;
+
+
+    letter-spacing:4px;
+
+
+    text-transform:uppercase;
+
+
+    color:#5b2017;
+
+}
+
+
+.paper h2 {
+
+    text-align:center;
+
+
+    font-style:italic;
+
+
+    font-weight:normal;
+
+
+    color:#7a4023;
+
+
+}
+
+
+
+/* разделитель */
+
+.divider {
+
+    width:120px;
+
+    height:2px;
+
+
+    margin:25px auto;
+
+
+    background:#9c6a2f;
+
+}
+
+
+
+/* текст письма */
+
+.paper p {
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+
+
+/* блок задания */
+
+.mission-task,
+.final-message {
+
+    margin-top:35px;
+
+    padding:25px;
+
+
+    border:
+
+    1px solid
+
+    rgba(120,70,30,0.4);
+
+
+    background:
+
+    rgba(255,240,190,0.35);
+
+
+    font-style:italic;
+
+}
+
+
+
+/* кнопка */
+
+.open-letter {
+
+    display:block;
+
+
+    margin:35px auto 0;
+
+
+    padding:14px 35px;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    background:#5b1714;
+
+
+    color:#f4d89a;
+
+
+    font-size:16px;
+
+
+    letter-spacing:2px;
+
+
+    border-radius:3px;
+
+
+    transition:.3s;
+
+}
+
+
+.open-letter:hover {
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+    0 8px 15px rgba(0,0,0,.4);
+
+}
+
+
+
+/* появление */
+
+@keyframes envelopeAppear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(40px)
+        scale(.95);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
