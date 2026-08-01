@@ -1311,3 +1311,18 @@ body {
     );
 
 }
+/* название дома */
+
+
+.paper h2 {
+
+    letter-spacing:
+
+    3px;
+
+
+    text-shadow:
+
+    0 1px 0 rgba(255,220,140,.4);
+
+}
