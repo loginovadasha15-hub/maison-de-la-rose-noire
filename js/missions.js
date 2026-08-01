@@ -78,3 +78,8 @@ acceptBtn.addEventListener("click", () => {
     `;
 
 });
+function openSeal(element) {
+
+    element.classList.add("broken");
+
+}
