@@ -1250,3 +1250,55 @@ body {
     }
 
 }
+/* =================================
+   Декоративные уголки письма
+================================= */
+
+
+.paper::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    border:
+
+        1px solid
+
+        rgba(120,75,30,0.25);
+
+
+    pointer-events:none;
+
+}
+
+
+
+.paper {
+
+    border-radius:2px;
+
+}
+
+
+
+/* уголки */
+
+.paper {
+
+    clip-path:
+
+    polygon(
+        0 8px,
+        8px 0,
+        calc(100% - 8px) 0,
+        100% 8px,
+        100% calc(100% - 8px),
+        calc(100% - 8px) 100%,
+        8px 100%,
+        0 calc(100% - 8px)
+    );
+
+}
