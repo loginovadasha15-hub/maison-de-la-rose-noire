@@ -465,14 +465,21 @@ transform:scale(1.05);
 }
 
 
-.wax-seal span {
+/* Герб внутри сургучной печати */
 
-    color: rgba(255,220,150,0.9);
+.seal-emblem {
 
-    font-size: 38px;
+    width: 55px;
+    height: 55px;
 
-    text-shadow:
-        0 2px 3px rgba(0,0,0,0.5);
+    fill: rgba(255,220,150,0.9);
+
+    filter:
+        drop-shadow(
+            0 2px 2px rgba(0,0,0,0.45)
+        );
+
+    opacity: 0.95;
 
 }
 
