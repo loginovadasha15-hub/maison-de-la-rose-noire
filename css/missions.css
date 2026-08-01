@@ -1371,3 +1371,93 @@ body {
     scale(1.15);
 
 }
+/* =================================
+   Клапан старого конверта
+================================= */
+
+
+.envelope::after {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:90px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(120,70,35,.9),
+        rgba(55,25,15,.95)
+    );
+
+
+    clip-path:
+
+    polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+
+    opacity:.9;
+
+
+    z-index:1;
+
+
+    filter:
+
+    drop-shadow(
+        0 8px 10px rgba(0,0,0,.35)
+    );
+
+}
+
+
+
+/* бумага поверх клапана */
+
+.paper {
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+/* печать поверх всего */
+
+.seal {
+
+    z-index:10;
+
+}
+
+
+
+/* лёгкий блеск на печати */
+
+
+.wax-seal:hover {
+
+    transform:
+
+    rotate(-8deg)
+    scale(1.05);
+
+
+    transition:.4s;
+
+}
