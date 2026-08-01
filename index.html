@@ -2,94 +2,71 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maison de la Rose Noire</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Секретный конверт</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="background"></div>
-<div class="particles"></div>
+<div class="overlay"></div>
 
-<main>
+<div class="container">
 
-    <div class="logo">
+<div class="seal" id="seal">
 
-        <div class="line"></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Wax_seal.svg/512px-Wax_seal.svg.png">
 
-        <div class="fleur">
-            ⚜
-        </div>
+<h2>ВСКРЫТЬ КОНВЕРТ</h2>
 
-        <div class="line"></div>
+</div>
 
-    </div>
+<div class="letter" id="letter">
 
-    <h1>
-        Maison de la Rose Noire
-    </h1>
+<h1>Конфиденциальное поручение</h1>
 
-    <h2>
-        Конверт семьи
-    </h2>
+<p>
+Сегодня вы разговариваете не просто с собеседником.
+Попробуйте увидеть человека глубже первых впечатлений.
+</p>
 
-    <p class="quote">
+<p>
+Не превращайте разговор в интервью.
+Пусть он развивается естественно — рассказывайте о себе,
+задавайте встречные вопросы, замечайте детали.
+</p>
 
-        «В мафии ценится не тот,
-        кто говорит громче всех,
-        а тот, кому доверяют молча.»
+<p>
+Обратите внимание на то, как человек:
+</p>
 
-    </p>
+<ul style="font-size:22px; line-height:1.8; margin-left:30px;">
+<li>реагирует на неожиданные вопросы;</li>
+<li>о чём говорит с удовольствием;</li>
+<li>что вызывает улыбку;</li>
+<li>какие ценности прослеживаются между строк;</li>
+<li>какие привычки или особенности речи вы замечаете.</li>
+</ul>
 
-    <div class="envelope" id="envelope">
+<p>
+Не записывайте ответы прямо сейчас.
+Запоминайте впечатления — они понадобятся позже.
+</p>
 
-        <div class="seal"></div>
+<button id="accept">Миссия принята</button>
 
-        <div class="top"></div>
+</div>
 
-        <div class="letter">
-
-            <h3>
-                Секретное письмо
-            </h3>
-
-            <p>
-
-                Внутри находится ваше персональное поручение.
-
-                Открывайте только тогда,
-                когда будете готовы начать игру.
-
-            </p>
-
-            <button id="accept">
-
-                Миссия принята
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <button id="openButton">
-
-        Вскрыть конверт
-
-    </button>
-
-</main>
+</div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
