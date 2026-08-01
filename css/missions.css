@@ -1,0 +1,311 @@
+/* ---------- Общие настройки ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family: "Georgia", serif;
+
+    background:#0f0f10;
+
+    color:#f4ecd8;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+}
+
+/* ---------- Фон ---------- */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,#26221c 0%,#131313 45%,#090909 100%);
+
+    z-index:-2;
+}
+
+/* ---------- Контейнер ---------- */
+
+.container{
+
+    width:min(90%,700px);
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+/* ---------- Заголовок ---------- */
+
+h1{
+
+    color:#d8b45f;
+
+    letter-spacing:4px;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    color:#b9b1a0;
+
+    margin-bottom:35px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+/* ---------- Конверт ---------- */
+
+.envelope{
+
+    width:360px;
+
+    height:220px;
+
+    margin:auto;
+
+    background:#e4d2ad;
+
+    border-radius:8px;
+
+    position:relative;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.55);
+
+    transition:.6s;
+}
+
+/* верхняя крышка */
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#d8c093;
+
+    clip-path:polygon(0 0,100% 0,50% 58%);
+
+}
+
+/* ---------- Печать ---------- */
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+
+    top:92px;
+
+    transform:translateX(-50%);
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#7c1217;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    box-shadow:
+    inset 0 0 12px rgba(255,255,255,.25),
+    0 10px 25px rgba(0,0,0,.45);
+
+    z-index:5;
+}
+
+/* ---------- Кнопка ---------- */
+
+#openBtn{
+
+    position:absolute;
+
+    bottom:-70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:14px 34px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    background:#b89143;
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.3s;
+}
+
+#openBtn:hover{
+
+    background:#d2ad63;
+
+    transform:translateX(-50%) scale(1.05);
+}
+
+/* ---------- Письмо ---------- */
+
+.letter{
+
+    display:none;
+
+    margin-top:90px;
+
+    background:#f3ead2;
+
+    color:#332b22;
+
+    padding:45px;
+
+    border:8px solid #b89143;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.5);
+
+    text-align:left;
+}
+
+.letter h2{
+
+    text-align:center;
+
+    color:#7d1b23;
+
+    margin-bottom:20px;
+}
+
+blockquote{
+
+    font-style:italic;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#555;
+}
+
+.letter h3{
+
+    margin-top:25px;
+
+    color:#7d1b23;
+}
+
+.letter ul{
+
+    margin:15px 0 0 25px;
+
+    line-height:1.8;
+}
+
+.letter p{
+
+    line-height:1.8;
+}
+
+/* ---------- Кнопка ---------- */
+
+#acceptBtn{
+
+    margin:40px auto 0;
+
+    display:block;
+
+    padding:14px 34px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#7c1217;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+#acceptBtn:hover{
+
+    background:#a81d28;
+}
+
+/* ---------- Телефон ---------- */
+
+@media(max-width:700px){
+
+.envelope{
+
+width:290px;
+
+height:180px;
+
+}
+
+.letter{
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:1.6rem;
+
+}
+
+}
