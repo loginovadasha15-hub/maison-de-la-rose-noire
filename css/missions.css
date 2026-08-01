@@ -732,14 +732,23 @@ body {
 
 /* текст письма */
 
-.paper p {
+  .paper p {
 
     line-height:1.8;
 
     font-size:17px;
 
-}
 
+    color:
+
+    #40261a;
+
+
+    text-shadow:
+
+    0 0 0.3px rgba(40,20,10,.5);
+
+}
 
 
 /* блок задания */
