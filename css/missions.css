@@ -605,7 +605,9 @@ body {
 .paper {
 
     position:relative;
-
+    animation: letterReveal 1.5s ease forwards;
+    animation-delay: .5s;
+    opacity:0;
     background:
 
         radial-gradient(
@@ -1079,5 +1081,172 @@ body {
     drop-shadow(
     0 10px 15px rgba(0,0,0,.5)
     );
+
+}
+/* =================================
+   Открытие старого письма
+================================= */
+
+
+@keyframes letterReveal {
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+            translateY(35px)
+            scale(.96);
+
+        filter:
+
+            blur(4px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+            translateY(0)
+            scale(1);
+
+        filter:
+
+            blur(0);
+
+    }
+
+}
+
+
+
+/* лёгкое движение конверта */
+
+
+.envelope {
+
+    animation:
+
+        envelopeAppear 1.2s ease,
+        envelopeFloat 8s ease-in-out infinite;
+
+}
+
+
+
+@keyframes envelopeFloat {
+
+
+    0% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-6px);
+
+    }
+
+
+    100% {
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* появление текста внутри письма */
+
+
+.paper h1,
+.paper h2,
+.paper p,
+.mission-task,
+.final-message,
+.open-letter {
+
+
+    animation:
+
+    textAppear 1s ease forwards;
+
+
+    opacity:0;
+
+}
+
+
+.paper h1 {
+
+    animation-delay:1s;
+
+}
+
+
+.paper h2 {
+
+    animation-delay:1.2s;
+
+}
+
+
+.paper p {
+
+    animation-delay:1.4s;
+
+}
+
+
+.mission-task,
+.final-message {
+
+    animation-delay:1.7s;
+
+}
+
+
+.open-letter {
+
+    animation-delay:2s;
+
+}
+
+
+
+@keyframes textAppear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+
+        translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
 
 }
