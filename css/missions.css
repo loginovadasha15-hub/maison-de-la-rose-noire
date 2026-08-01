@@ -199,20 +199,30 @@ h1{
 
     margin-top:90px;
 
-    background:#f3ead2;
+    background:linear-gradient(
+        180deg,
+        #f8efd8 0%,
+        #f1e4c3 100%
+    );
 
-    color:#332b22;
+    color:#2e261d;
 
-    padding:45px;
+    padding:60px;
 
-    border:8px solid #b89143;
+    border:2px solid #c8a764;
 
-    border-radius:10px;
+    border-radius:8px;
 
     box-shadow:
-    0 30px 60px rgba(0,0,0,.5);
+        0 25px 70px rgba(0,0,0,.55),
+        inset 0 0 25px rgba(255,255,255,.35);
 
     text-align:left;
+
+    position:relative;
+
+    overflow:hidden;
+
 }
 
 .letter h2{
@@ -336,5 +346,65 @@ font-size:18px;
 background:#d5b46c;
 
 transform:scale(1.05);
+
+}
+/* ==========================
+   Уголки письма
+========================== */
+
+.letter{
+    position:relative;
+    overflow:hidden;
+}
+
+.corner{
+
+    position:absolute;
+
+    width:45px;
+
+    height:45px;
+
+    border:2px solid #b89143;
+
+}
+
+.top-left{
+
+    top:15px;
+    left:15px;
+
+    border-right:none;
+    border-bottom:none;
+
+}
+
+.top-right{
+
+    top:15px;
+    right:15px;
+
+    border-left:none;
+    border-bottom:none;
+
+}
+
+.bottom-left{
+
+    bottom:15px;
+    left:15px;
+
+    border-right:none;
+    border-top:none;
+
+}
+
+.bottom-right{
+
+    bottom:15px;
+    right:15px;
+
+    border-left:none;
+    border-top:none;
 
 }
