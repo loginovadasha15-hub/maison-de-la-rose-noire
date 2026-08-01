@@ -309,3 +309,32 @@ font-size:1.6rem;
 }
 
 }
+.nextMission{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:16px 36px;
+
+background:#b89143;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.3s;
+
+font-size:18px;
+
+}
+
+.nextMission:hover{
+
+background:#d5b46c;
+
+transform:scale(1.05);
+
+}
