@@ -1461,3 +1461,64 @@ body {
     transition:.4s;
 
 }
+/* =================================
+   Вскрытие сургучной печати
+================================= */
+
+
+.seal {
+
+    cursor:pointer;
+
+    transition:.5s;
+
+}
+
+
+
+.seal.broken {
+
+    animation:
+
+    sealBreak .8s forwards;
+
+}
+
+
+
+@keyframes sealBreak {
+
+
+    0% {
+
+        transform:
+
+        scale(1)
+        rotate(-8deg);
+
+    }
+
+
+    40% {
+
+        transform:
+
+        scale(1.15)
+        rotate(5deg);
+
+    }
+
+
+    100% {
+
+        opacity:0;
+
+        transform:
+
+        scale(.2)
+        rotate(25deg)
+        translateY(40px);
+
+    }
+
+}
